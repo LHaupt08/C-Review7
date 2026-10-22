@@ -177,7 +177,7 @@ namespace SimpleCalculator
             }
             catch (FormatException)
             {
-                msg = name + " must be a non-zero value when dividing.\n";
+                msg = name + " must be a non-zero decimal value, even when dividing.\n";
             }
 
             return msg;
