@@ -164,10 +164,18 @@ namespace SimpleCalculator
 
         private string isNotZero(string value, string name)
         {
-
             string msg = "";
+            try
+            {
 
-            if (Convert.ToDecimal(value) == 0)
+                if (Convert.ToDecimal(value) == 0)
+                {
+                    msg = name + " must be a non-zero value when dividing.\n";
+                }
+
+
+            }
+            catch (FormatException)
             {
                 msg = name + " must be a non-zero value when dividing.\n";
             }
